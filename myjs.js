@@ -3,19 +3,15 @@ function getComputerChoice() {
     return arr[(Math.floor(Math.random() * arr.length))]
 
 }
-
+arr = ["rock", "scissor", "paper"]
 
 function Game(playerSelection, computerSelection) {
-    const playerSelection = prompt(`paper,scissor, rock: `)
+    playerSelection = prompt(`paper,scissor, rock: `)
     playerSelection = playerSelection.toLowerCase()
-    const computerSelection = getComputerChoice()
+    computerSelection = getComputerChoice()
+    if (!arr.includes(playerSelection)) { alert(`wrong input`) }
     if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) { alert(`you lose the computer chose ${computerSelection}`) } else { alert(`you win the computer chose ${computerSelection}`) }
 
 
 }
 Game()
-console.log(Game())
-console.log(Game())
-console.log(Game())
-console.log(Game())
-console.log(Game())
