@@ -5,7 +5,7 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice());
 
-function Gamepad(playerSelection, computerSelection) {
+function Game(playerSelection, computerSelection) {
     playerSelection = prompt(`paper,scissor, rock: `)
     playerSelection = playerSelection.toLowerCase()
     computerSelection = getComputerChoice()
@@ -13,3 +13,4 @@ function Gamepad(playerSelection, computerSelection) {
 
 
 }
+Game()
