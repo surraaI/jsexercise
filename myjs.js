@@ -3,13 +3,13 @@ function getComputerChoice() {
     return arr[(Math.floor(Math.random() * arr.length))]
 
 }
-console.log(getComputerChoice());
+
 
 function Game(playerSelection, computerSelection) {
     playerSelection = prompt(`paper,scissor, rock: `)
     playerSelection = playerSelection.toLowerCase()
     computerSelection = getComputerChoice()
-    if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) { alert(`you lose`) } else { alert(`you win`) }
+    if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) { alert(`you lose the computer chose ${computerSelection}`) } else { alert(`you win the computer chose${computerSelection}`) }
 
 
 }
