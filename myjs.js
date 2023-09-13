@@ -4,3 +4,12 @@ function getComputerChoice() {
 
 }
 console.log(getComputerChoice());
+
+function Gamepad(playerSelection, computerSelection) {
+    playerSelection = prompt(`paper,scissor, rock: `)
+    playerSelection = playerSelection.toLowerCase()
+    computerSelection = getComputerChoice()
+    if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) { alert(`you lose`) } else { alert(`you win`) }
+
+
+}
