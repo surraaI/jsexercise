@@ -11,9 +11,13 @@ function playround(playerSelection, computerSelection) {
     computerSelection = getComputerChoice()
     if (!arr.includes(playerSelection)) { alert(`wrong input`) }
     if (arr.includes(playerSelection)) {
-        if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) { return `you lose the computer chose ${computerSelection}` } else { return `you win the computer chose ${computerSelection}` }
+        if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) { return `you lose the computer chose ${computerSelection} you chose ${playerSelection}` } else if (playerSelection === computerSelection) { return `draw` } else { return `you win the computer chose ${computerSelection} you chose ${playerSelection}` }
     }
 
 }
-playround()
-sonsole.log(playround())
+
+console.log(playround())
+console.log(playround())
+console.log(playround())
+console.log(playround())
+console.log(playround())
