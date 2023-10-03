@@ -8,21 +8,10 @@ let count = 0;
 let mark = 0
 let div = document.getElementsByTagName('div');
 let i = 0;
+let playerWins = 0;
+let computerWins = 0;
+let totalPlays = 0;
 
-function five() {
-    if (count <= 4) { count += 1 } else if (count === 5) {
-
-        if (mark > 0) {
-            alert('you win')
-        } else if (mark === 0) { alert(`you draw`) } else { alert(`you lose`) }
-
-
-        for (j = 0; j < 5; j++) { div[j].innerHTML = '' }
-        i = 0
-        count = 0
-    }
-
-}
 
 
 function playround(playerSelection) {
@@ -35,19 +24,28 @@ function playround(playerSelection) {
     if (arr.includes(playerSelection)) {
         if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissor`) || (playerSelection === `scissor` && computerSelection === `rock`)) {
             div[i].innerHTML = `you lose the computer chose ${computerSelection} you chose ${playerSelection}`;
-            mark -= 1;
+            computerWins++;
             i += 1
+            totalPlays++;
         } else if (playerSelection === computerSelection) {
             div[i].innerHTML = `draw`;
             i += 1
+            totalPlays++;
         } else {
             div[i].innerHTML = `you win the computer chose ${computerSelection} you chose ${playerSelection}`;
-            mark += 1
+            playerWins++
             i += 1
+            totalPlays++;
         }
     }
     five();
 }
+
+function five() {
+    if (totalPlays === 5) alert(`you win: ${playerWins} times.` + `\ncomputer wins: ${computerWins}`)
+
+}
+
 
 
 const paper = document.getElementById('paper');
